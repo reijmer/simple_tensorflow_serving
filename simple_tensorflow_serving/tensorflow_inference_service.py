@@ -56,6 +56,7 @@ class TensorFlowInferenceService(AbstractInferenceService):
     self.postprocess_function = None
 
     if custom_op_paths != "":
+      custom_op_paths = str(custom_op_paths)
       self.load_custom_op(custom_op_paths)
 
     self.version_session_map = {}
